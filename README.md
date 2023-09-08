@@ -2,5 +2,6 @@
 
 Name: Christian-Broer Ward
 Student Number: 041069447
-Project to complete:
+Project to complete: Astronomy Picture of the Day Search
+
 
