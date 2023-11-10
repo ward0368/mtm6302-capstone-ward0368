@@ -19,7 +19,7 @@ apodForm.addEventListener("submit", async (e) => {
   // Display the APOD data on the page
   displayAPOD(apodData);
   
-  // Update the "Favorite" button
+  // Updates the "Favorite" button
   updateFavoriteButton(apodData);
 });
 
