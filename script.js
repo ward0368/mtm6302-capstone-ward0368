@@ -54,7 +54,7 @@ function displayAPOD(apodData) {
     window.open(apodData.hdurl, "_blank");
   });
 
-  const titleElement = document.createElement("h2");
+  const titleElement = document.createElement("h3");
   titleElement.textContent = apodData.title;
 
   const dateElement = document.createElement("p");
