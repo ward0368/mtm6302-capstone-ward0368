@@ -48,6 +48,9 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
 /* CSS STYLING BEGINS */
 
 h1 {
@@ -69,6 +72,8 @@ p, a {
 .container {
     padding: 20px;
 }
+
+
 
 /* FAVORITES STYLING */
 
@@ -109,6 +114,7 @@ p, a {
 }
 
 
+/* APOD STYLING */
 
 form {
 	padding: 10px;
@@ -119,4 +125,8 @@ form {
     font-size: xx-large;
     font-weight: bold;
 	padding: 20px;
+}
+
+.apodcontainer h2 {
+
 }
