@@ -74,3 +74,5 @@ function displayAPOD(apodData) {
   apodContainer.appendChild(dateElement);
   apodContainer.appendChild(explanationElement);
 }
+
+
