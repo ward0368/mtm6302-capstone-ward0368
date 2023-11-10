@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo a day</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APOD Search</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    
+    <div class="websitetitle">
+    <h1>Astronomy Picture of the Day</h1>
+    </div>
+    <h2>Discover the cosmos! Each day a different image or photograph of our fascina</h2>
+  <div class="container">
+    <form id="apodForm">
+      <label for="date">Select a date (YYYY-MM-DD):</label>
+      <input type="text" id="date" required>
+      <button type="submit">Get APOD</button>
+    </form>
+    <div id="apodContainer">
+      <!-- Display APOD image and information here -->
+    </div>
+    <div id="favoritesContainer">
+      <!-- Display saved favorites here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
