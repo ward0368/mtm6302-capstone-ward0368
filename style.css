@@ -136,24 +136,26 @@ input[type="text"]:focus {
 /* Favorites container styling */
 #favoritescontainer {
     display: flex;
-    flex-direction: column;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
     gap: 10px;
 }
 
 /* Individual favorite item styling */
 .favorite-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: inline-flex;
     padding: 20px;
     margin: 0;
+	justify-content: center;
 }
 
 /* Button inside favorite item styling */
 .favorite-item button {
     display: flex;
     justify-content: center;
-    padding: 2%;
+	align-items: center;
+    padding: 10px;
     margin: 0 0 0 10px;
     font-size: 16px;
     font-weight: bold;
@@ -176,6 +178,9 @@ input[type="text"]:focus {
     text-align: center;
     padding: 5px;
 }
+
+
+
 
 /* APOD Styling */
 
@@ -218,23 +223,38 @@ form {
 
     /* Buttons */
     button {
-        font-size: 14px;
+        font-size: 18px;
 		padding: 10px;
+		font-weight: bold;
     }
+
 
     /* Favorite items */
     .favorite-item {
         padding: 12px;
+		display: flex;
+		justify-content: center;
     }
+
+	.favorite-item p {
+		font-family: 'Lato', sans-serif;
+		font-size: xx-large;
+		font-weight: bold;
+		padding: 20px;
+    }
+
 
     /* Favorite item buttons */
     .favorite-item button {
-        font-size: 14px;
-		padding: 10px;
+        font-size: 22px;
+		padding: 20px;
+		font-weight: bold;
     }
 
     /* Input text fields */
     input[type="text"] {
         font-size: small;
+		padding: 12px;
+		margin: 10px;
     }
 }
