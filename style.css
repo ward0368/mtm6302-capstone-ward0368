@@ -54,16 +54,69 @@ h1 {
     font-family: 'Lato', sans-serif;
     font-size: xx-large;
     font-weight: bold;
+	padding: 20px;
 }
 
+body {
+	text-align: center;
+}
 
 p, a {
     font-family: 'Lato', sans-serif;
     font-size: small;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
 
+.container {
+    padding: 20px;
+}
+
+/* FAVORITES STYLING */
+
+
+#favoritescontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.favorite-item {
+	display: inline-flex;
+	flex-direction: center;
+	justify-content: center;
+	padding: 20px;
+	margin: 0;
+}
+
+.favorite-item button {
+	display: flex;	
+	padding: 4px;
+	margin: 0 0 0 10px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border: 2px solid #3498db;
+	color: #3498db;
+	background-color: #fff;
+	border-radius: 6px;
+}
+
+.favorite-item p {
+	font-family: 'Lato', sans-serif;
+	font-size: medium;
+	font-weight: bold;
+}
+
+
+
+form {
+	padding: 10px;
+}
+
+.apodcontainer {
+    font-family: 'Lato', sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+	padding: 20px;
 }
