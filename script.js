@@ -1,78 +1,105 @@
-// Get references to the HTML elements
 const apodForm = document.getElementById("apodForm");
 const dateInput = document.getElementById("date");
 const apodContainer = document.getElementById("apodContainer");
+const favoriteButton = document.getElementById("favoriteButton");
+const favoritesContainer = document.getElementById("favorites-container");
 
-// Add a submit event listener to the form
+// Initialize an empty favorites array
+let favorites = [];
+
 apodForm.addEventListener("submit", async (e) => {
-  // Prevent the default form submission behavior
   e.preventDefault();
-  
-  // Get the selected date from the input field
   const selectedDate = dateInput.value;
-
   // Make an API request using the selected date
   const apodData = await fetchAPOD(selectedDate);
-
   // Display the APOD data on the page
   displayAPOD(apodData);
+  // Update the "Favorite" button
+  updateFavoriteButton(apodData);
 });
 
-// Function to fetch APOD data from the NASA API
+favoriteButton.addEventListener("click", () => {
+  const selectedDate = dateInput.value;
+  toggleFavorite(selectedDate);
+});
+
 function fetchAPOD(date) {
-  // API key for NASA APOD API
-  const apiKey = "kVurqIjU2JvUbSWYAuTBXVKpX3A4cUorsvOpx5ps";
-  
-  // Construct the API URL with the provided date and API key
+  const apiKey = "Gn2fSluExTEo1TgglbcAkiSDlWQ8X6DgeV7txEh8";
   const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
-  
-  // Perform the API request using the fetch function
   return fetch(apiUrl)
     .then((response) => {
-      // Check if the response is successful; otherwise, throw an error
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      // Parse the JSON response and return the result
       return response.json();
     })
     .catch((error) => console.error("Error fetching APOD data: ", error));
 }
 
-// Function to display APOD data on the page
 function displayAPOD(apodData) {
-  // Create an image element for the APOD image
+  // Display the APOD image, title, date, and explanation on the page
   const imageElement = document.createElement("img");
-  // Set the image source and alt text
   imageElement.src = apodData.url;
   imageElement.alt = apodData.title;
-  // Add a click event listener to open the high-definition image in a new tab
   imageElement.addEventListener("click", () => {
     window.open(apodData.hdurl, "_blank");
   });
 
-  // Create an h2 element for the APOD title
   const titleElement = document.createElement("h2");
-  // Set the text content of the title element
   titleElement.textContent = apodData.title;
 
-  // Create a paragraph element for the APOD date
   const dateElement = document.createElement("p");
-  // Set the text content of the date element
   dateElement.textContent = apodData.date;
 
-  // Create a paragraph element for the APOD explanation
   const explanationElement = document.createElement("p");
-  // Set the text content of the explanation element
   explanationElement.textContent = apodData.explanation;
 
-  // Clear the existing content of the apodContainer
   apodContainer.innerHTML = "";
-  // Append the image, title, date, and explanation elements to the apodContainer
   apodContainer.appendChild(imageElement);
   apodContainer.appendChild(titleElement);
   apodContainer.appendChild(dateElement);
   apodContainer.appendChild(explanationElement);
 }
 
+function updateFavoriteButton(apodData) {
+  const isFavorite = favorites.some((favorite) => favorite.date === apodData.date);
+  if (isFavorite) {
+    favoriteButton.textContent = "Unfavorite";
+  } else {
+    favoriteButton.textContent = "Favorite";
+  }
+}
 
+async function toggleFavorite(date) {
+  const isFavorite = favorites.some((favorite) => favorite.date === date);
+  if (!isFavorite) {
+    const apodData = await fetchAPOD(date);
+    favorites.push({ date, data: apodData });
+  } else {
+    favorites = favorites.filter((favorite) => favorite.date !== date);
+  }
+  updateFavoriteButton({ date });
+  displayFavorites();
+}
+
+function displayFavorites() {
+  favoritesContainer.innerHTML = "";
+  favorites.forEach((favorite) => {
+    // Create a container for each favorite APOD
+    const favoriteElement = document.createElement("div");
+    favoriteElement.className = "favorite-item";
+
+    const favoriteDate = document.createElement("p");
+    favoriteDate.textContent = favorite.date;
+
+    const viewButton = document.createElement("button");
+    viewButton.textContent = "View";
+    viewButton.addEventListener("click", () => {
+      displayAPOD(favorite.data);
+    });
+
+    favoriteElement.appendChild(favoriteDate);
+    favoriteElement.appendChild(viewButton);
+    favoritesContainer.appendChild(favoriteElement);
+  });
+}

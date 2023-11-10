@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata for character set and viewport -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Title of the webpage -->
   <title>APOD Search</title>
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="style.css"/>
+  <!-- Links to Google Fonts for Lato font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="websitetitle">
+  <!-- Main website title section -->
+  <div class="websitetitle">
     <h1>Astronomy Picture of the Day</h1>
-    </div>
-    <h2>Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer</h2>
+  </div>
+  <!-- Introduction about the website -->
+  <h2>Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer</h2>
+  
+  <!-- Main container for the form, APOD display, and favorites -->
   <div class="container">
-    <form id="apodForm">
-      <label for="date">Select a date (YYYY-MM-DD):</label>
-      <input type="text" id="date" required>
-      <button type="submit">Get APOD</button>
-    </form>
-    <div id="apodContainer">
-      <!-- Display APOD image and information here -->
-    </div>
-    <div id="favoritesContainer">
-      <!-- Display saved favorites here -->
+    <div class="container">
+      <!-- APOD search form -->
+      <form id="apodForm">
+        <!-- Input for selecting a date -->
+        <label for="date">Select a date (YYYY-MM-DD):</label>
+        <input type="text" id="date" required>
+        <!-- Button to submit the form and get APOD -->
+        <button type="submit">Get APOD</button>
+        <!-- "Favorite" button for adding/removing APODs from favorites -->
+        <button type="button" id="favoriteButton">Favorite</button>
+      </form>
+      <!-- Container for displaying the APOD image and information -->
+      <div id="apodContainer">
+        <!-- Display APOD image and information here -->
+      </div>
+      
+      <!-- Favorites section -->
+      <h2>Favorites</h2>
+      <div id="favorites-container">
+        <!-- Display favorite APODs here -->
+      </div>
     </div>
   </div>
+  
+  <!-- Link to external JavaScript file -->
   <script src="script.js"></script>
 
+  <!-- Footer with links from the original site -->
   <footer>
     <hr>
+    <!-- Navigation links -->
     <a>&lt;</a>
     <a href="https://apod.nasa.gov/apod/archivepix.html">Archive</a>
     <a href="https://apod.nasa.gov/apod/lib/apsubmit2015.html">Submissions</a>
@@ -40,12 +66,29 @@
     <a href="http://asterisk.apod.com/viewtopic.php?t=43421">Discuss</a>
     <a>&gt;</a>
     <hr>
-    <p>Authors & editors: Robert Nemiroff (MTU) & Jerry Bonnell (UMCP)
-        NASA Official: Phillip Newman Specific rights apply.
-        NASA Web Privacy Policy and Important Notices
-        A service of: ASD at NASA / GSFC,
-        NASA Science Activation
-        & Michigan Tech. U.</p>
+    <!-- Credits and information section -->
+    <p class="credits">
+      <b>Authors & editors:</b>
+      <a href="http://www.phy.mtu.edu/faculty/Nemiroff.html">Robert Nemiroff</a>
+      <a href="http://www.phy.mtu.edu/">(MTU)</a>
+      <a href="https://antwrp.gsfc.nasa.gov/htmltest/jbonnell/www/bonnell.html">Jerry Bonnell</a>
+      <a href="http://www.astro.umd.edu/">(UMCP)</a>
+      <br>
+      <b>NASA Official:</b>
+      <p>Phillip Newman</p>
+      <a href="lib/about_apod.html#srapply">Specific rights apply</a>
+      <br>
+      <a href="https://www.nasa.gov/about/highlights/HP_Privacy.html">NASA Web Privacy Policy and Important Notices</a>
+      <br>
+      <b>A service of:</b>
+      <a href="https://astrophysics.gsfc.nasa.gov/">ASD</a> at <a href="https://www.nasa.gov/">NASA</a> <a href="https://www.nasa.gov/centers/goddard/">GSFC</a>
+      <br>
+      <a href="https://science.nasa.gov/learners">NASA Science Activation</a>
+      <br>
+      <b>&amp;</b>
+      <a href="http://www.mtu.edu/">Michigan Tech. U.</a>
+      <br>
+    </p>
   </footer>
 </body>
 </html>
