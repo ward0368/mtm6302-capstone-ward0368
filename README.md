@@ -18,7 +18,7 @@ Steps Taken:
 - I found out the solution and executed. I made the code work alongside a favorites feature.
 - I styled all of this within CSS using Flexbox and the Lato font.
 - I create a media query for mobile devices to make the site more accessible
-- I made sure the site was responsive.
+- I made sure the site was responsive for both desktop and mobile (chaging font sizes, layouts, button sizes, etc.)
 - I made my design use colors from my wireframe and attempted to make my site look alike to my wireframe.
 - I validated all my code.
 - I submitted.
