@@ -201,31 +201,36 @@ form {
     /* Header 1 */
     h1 {
         font-size: large;
+		padding: 5px;
     }
 
     /* Header 2 */
     h2 {
         font-size: small;
+		padding: 5px;
     }
 
     /* Header 3 */
     h3 {
         font-size: medium;
+		padding: 5px;
     }
 
     /* Buttons */
     button {
         font-size: 14px;
+		padding: 10px;
     }
 
     /* Favorite items */
     .favorite-item {
-        padding: 10px;
+        padding: 12px;
     }
 
     /* Favorite item buttons */
     .favorite-item button {
         font-size: 14px;
+		padding: 10px;
     }
 
     /* Input text fields */
