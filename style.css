@@ -53,121 +53,144 @@ table {
 
 /* GENERAL STYLING */
 
+/* Header 1 styling */
 h1 {
     font-family: 'Lato', sans-serif;
     font-size: xx-large;
     font-weight: bold;
-	padding: 20px;
+    padding: 20px;
 }
 
+/* Body styling */
 body {
-	text-align: center;
+    text-align: center;
 }
 
+/* Paragraph and link styling */
 p, a {
     font-family: 'Lato', sans-serif;
     font-size: medium;
-	padding: 5px;
+    padding: 5px;
 }
 
+/* Container styling */
 .container {
     padding: 20px;
 }
 
+/* Button styling */
 button {
-padding: 4px;
-margin: 0 0 0 5px;
-font-size: 16px;
-font-weight: bold;
-text-align: center;
-text-decoration: none;
-cursor: pointer;
-border: 2px solid #ffcd03;
-background-color: #e4bc17;
-border-radius: 6px;
+    padding: 4px;
+    margin: 0 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #ffcd03;
+    background-color: #e4bc17;
+    border-radius: 6px;
 }
 
-
+/* Header 2 styling */
 h2 {
     font-family: 'Lato', sans-serif;
-	font-size: large;
-	padding: 7px
+    font-size: medium;
+    padding: 8px;
+    font-weight: bold;
 }
 
+/* Header 3 styling */
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+    padding: 7px;
+    font-weight: bold;
+}
+
+/* Label styling */
 label {
-	font-family: 'Lato', sans-serif;
-	font-size: medium;
-	padding: 5px;
-	font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    padding: 5px;
+    font-weight: bold;
 }
 
+/* Input text field styling */
 input[type="text"] {
-	padding: 2px;
-	border: 2px solid #ffcd03;
-	border-radius: 7px;
-	outline: none;
-	font-size: medium;
+    padding: 2px;
+    border: 2px solid #ffcd03;
+    border-radius: 7px;
+    outline: none;
+    font-size: medium;
 }
-  
+
+/* Input text field focus styling */
 input[type="text"]:focus {
-	border-color: #ffcd03;
-	box-shadow: 0 0 4px rgba(191,132,118, 0.3);
+    border-color: #ffcd03;
+    box-shadow: 0 0 4px rgba(191,132,118, 0.3);
 }
+
 
 
 /* FAVORITES SECTION STYLING */
 
-
+/* Favorites container styling */
 #favoritescontainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Individual favorite item styling */
 .favorite-item {
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 20px;
-	margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
 }
 
+/* Button inside favorite item styling */
 .favorite-item button {
-	display: flex;
-	justify-content: center;
-	padding: 2%;
-	margin: 0 0 0 10px;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
-	border: 2px solid #ffcd03;
-	background-color: #e4bc17;
-	border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    margin: 0 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #ffcd03;
+    background-color: #e4bc17;
+    border-radius: 6px;
 }
 
+/* Paragraph inside favorite item styling */
 .favorite-item p {
-	display: flex;
-	font-family: 'Lato', sans-serif;
-	font-size: medium;
-	font-weight: bold;
-	margin: 0;
-	justify-content: center;
-	text-align: center;
-	padding: 5px;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
 }
 
 
 /* APOD STYLING */
 
+/* Form styling */
 form {
-	padding: 10px;
+    padding: 10px;
 }
 
+/* APOD container styling */
 .apodcontainer {
     font-family: 'Lato', sans-serif;
     font-size: xx-large;
     font-weight: bold;
-	padding: 20px;
+    padding: 20px;
 }
