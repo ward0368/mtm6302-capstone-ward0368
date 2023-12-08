@@ -23,3 +23,4 @@ Steps Taken:
 - I validated all my code.
 - I submitted.
 
+Report #2: During the course of this assignment, I have learned many new things about Javascript and pushed my coding knoweldge further beyond what I thought possible. I am very pleased with how I have learned and used this knowledge to create websites and/or functional javascript based websites. There were many challegens, too many to count, especially involving Javascript; such as when I was attempting to add favorites to capstone part-3 and it took me many hours to figure out. Luckily, putting in hours of research does pay off, and paying attention in class is quite helpful. When I went into Web Development 1, I have very minimal coding knowledge. Now I am confident in my skills and look forward to potentially using this knowledge in the future. Thank you for your class, and I wish you the best.
